@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Different Types in JavaScript</h1>
+        <div class="button_container">
+            <div class="button_su">
+                <span class="su_button_circle">
+
+                </span>
+                <a href="#" class="button_su_inner" onclick="alert('I am awesome, But No one use me')">
+                <span class="button_text_container">
+                    Simple Inline Alert()
+                </span>
+            </a>
+            </div>
+            <div class="button_su">
+                <span class="su_button_circle">
+
+                </span>
+                <a href="#" class="button_su_inner" onclick="callingFunction()">
+                <span class="button_text_container">
+                   By calling a Function
+                </span>
+            </a>
+            </div>
+            <div class="button_su">
+                <span class="su_button_circle">
+
+                </span>
+                <a href="#" class="button_su_inner">
+                <span class="button_text_container" id="thirdWay">
+                   Inline Event
+                </span>
+            </a>
+            </div>
+            <div class="button_su">
+                <span class="su_button_circle">
+
+                </span>
+                <a href="#" class="button_su_inner" id="fourthWay">
+                <span class="button_text_container">
+                   By calling a Function
+                </span>
+            </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const callingFunction=()=>{
+            alert("Most common wriiten function");
+        }
+
+        const thirdWay = document.getElementById('thirdWay');
+        thirdWay.onclick=function(){
+            alert("Most common wriiten function");
+        }
+
+        const fourthWay = document.querySelector('#fourthWay');
+        fourthWay.addEventListener('click',()=>{
+            alert("I love this way of wriiting");
+        })
+    </script>
+</body>
+</html>
